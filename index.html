@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Have Been Attacked</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            font-size: 3rem;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url('https://media.istockphoto.com/id/1277243162/vector/hacker-background-cybersecurity-concept.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .warning {
+            animation: flicker 0.5s infinite alternate, colorChange 0.3s infinite alternate;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            100% { opacity: 0.2; }
+        }
+        @keyframes colorChange {
+            0% { color: red; }
+            50% { color: yellow; }
+            100% { color: white; }
+        }
+        .virus {
+            font-size: 5rem;
+            animation: shake 0.3s infinite alternate;
+        }
+        @keyframes shake {
+            0% { transform: translateX(-10px); }
+            100% { transform: translateX(10px); }
+        }
+        .marquee {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            font-size: 2rem;
+            color: yellow;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .marquee span {
+            display: inline-block;
+            animation: marquee 5s linear infinite;
+        }
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee">
+        <span>!!! WARNING !!! YOUR SYSTEM IS COMPROMISED !!! WARNING !!!</span>
+    </div>
+    <div class="warning">
+        ⚠️⚠️ YOU HAVE BEEN ATTACKED!!! ⚠️⚠️
+        <br>
+        <span class="virus">☣️☠️💀☠️☣️</span>
+    </div>
+</body>
+</html>
